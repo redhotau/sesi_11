@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Belajar Javascript assignment2</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+<body onload="console.log('ready')" style="background-color: gainsboro;">
+    <!-- Navbar -->
+      <nav class="navbar sticky-top navbar-expand-lg bg-white">
+        <div class="container-fluid ">
+          <a class="navbar-brand" href="#"></a>
+            <div class="navbar-nav">
+                <a class="nav-link active" aria-current="page" href="index1.html">HOME</a>
+                <a class="nav-link" href="product.html">PRODUCT</a>
+                <a class="nav-link" href="gallery.html">GALLERY</a>
+                <a class="nav-link" href="blog.html">BLOG</a>
+                <a class="nav-link" href="myinventory.html">MY INVENTORY</a>
+            </div>
+        </div>
+      </nav>
+<!-- grid sistem -->
+        <div class="container mt-3">
+            <div class="card m-2">
+            <div class="row bg-white">
+                <div class="col-md-3 mb-3 mt-3 bg-white"> 
+                <!--images-->
+                    <img src="./images/pp.jpg" class="rounded-circle img-center" alt="pp" width="80%">
+                </div>
+                <!--Profil-->
+                <div class="col-md-3 mt-3">
+                        <h3 id="nama">Nama Anda</h3>
+                        <p>Front end designer</p>
+                        <button type="button" class="btn btn-primary btn-sm" onclick="show_form()">Edit</button>
+                        <button type="button" class="btn btn-outline-success btn-sm">Resume</button>
+                </div>
+                <!--Profil detail-->
+                <div class="col-md-6 mb-3 mt-3">
+                    <table class="table-borderless table-spacing">
+                        <tr>
+                          <th></th>
+                        </tr>
+                        <tr>
+                            <td class="fw-bold" style="padding: 10px;">Availability</td>
+                            <td id="fulltime" style="padding: 10px;">Full Time</td>
+                        </tr>
+                        <tr>
+                            <td class="fw-bold" style="padding: 10px;">Usia</td>
+                            <td style="padding: 10px;">17</td>
+                        </tr>
+                        <tr>
+                            <td class="fw-bold" style="padding: 10px;">Alamat</td>
+                            <td style="padding: 10px;">Jakarta, Indonesia</td>
+                        </tr>
+                        <tr>
+                            <td class="fw-bold" style="padding: 10px;">Pengalaman</td>
+                            <td style="padding: 10px;">2</td>
+                        </tr>
+                        <tr>
+                            <td class="fw-bold" style="padding: 10px;">Email</td>
+                            <td style="padding: 10px;">Developer@gmail.com</td>
+                        </tr>
+                      </table>
+                        <!-- <p>Availability</p>
+                        <p>Usia</p>
+                        <p>Lokasi</p>
+                        <p>Pengalaman</p>
+                        <p>Email</p> -->
+                </div>
+            </div>
+            </div>
+        
+<!-- Form -->
+            <div id="the_form" style="display: none;">
+                <div class="card mb-3">
+                <form class="form-control-sm pt-3;">
+                    <div class="mb-3">
+                        <label for="form_nama" class="form-label" onmouseover="this.className = 'form-label text-primary'" onmouseout="this.className = 'form-label'" >Nama</label>
+                        <input type="form_nama" class="form-control" id="form_nama" placeholder="Nama Anda">
+                    </div>
+                    <div class="mb-3">
+                        <label for="role" class="form-label" onmouseover="this.className = 'form-label text-primary'" onmouseout="this.className = 'form-label'">Role</label>
+                        <input type="role" class="form-control" id="role" placeholder="-">
+                    </div>
+                    <div class="mb-3">
+                        <label for="avail" class="form-label" onmouseover="this.className = 'form-label text-primary'" onmouseout="this.className = 'form-label'">Availability</label>
+                        <input type="avail" class="form-control" id="avail" placeholder="Full time atau Part time">
+                    </div>
+                    <div class="mb-3">
+                        <label for="age" class="form-label" onmouseover="this.className = 'form-label text-primary'" onmouseout="this.className = 'form-label'">Age</label>
+                        <input type="age" class="form-control" id="age" placeholder="-">
+                    </div>
+                    <div class="mb-3">
+                        <label for="lokasi" class="form-label" onmouseover="this.className = 'form-label text-primary'" onmouseout="this.className = 'form-label'">Lokasi</label>
+                        <input type="lokasi" class="form-control" id="lokasi" placeholder="-">
+                    </div>
+                    <div class="mb-3">
+                        <label for="years" class="form-label" onmouseover="this.className = 'form-label text-primary'" onmouseout="this.className = 'form-label'">Years Experience</label>
+                        <input type="years" class="form-control" id="years" placeholder="-">
+                    </div>
+                    <div class="mb-3">
+                        <label for="form_email" class="form-label" onmouseover="this.className = 'form-label text-primary'" onmouseout="this.className = 'form-label'">Email address</label>
+                        <input type="form_email" class="form-control" id="form_email" value="@telkomsel.co.id">
+                        <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                    </div>
+                </form>
+                <div class="d-grid gap-2">
+                    <button class="btn btn-success btn-sm" onclick="submit()" type="button">SUBMIT</button>
+                </div>
+                </div>
+            </div>
+        </div>
+    <script src="./js/indexscript.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
